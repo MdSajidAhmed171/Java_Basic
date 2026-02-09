@@ -15,6 +15,8 @@ public class Static_basic {
 		T.print();
 		System.out.println("Count: " + T.count);
 		System.out.println("Check: " + check);
+		Outer.hello();
+		Outer.Inner.TempShow();
 		
 		
 		Outer.Inner obj = new Outer.Inner();
@@ -43,9 +45,15 @@ public class Static_basic {
 }
 
 class Outer {
-    static class Inner {
+	static void hello() {
+        System.out.println("Hello");
+    }
+     static class Inner {
         void show() {
             System.out.println("Static inner class");
+        }
+        static void TempShow() {
+            System.out.println("Static Temp Show");
         }
     }
 }
